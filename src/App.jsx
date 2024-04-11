@@ -1,31 +1,32 @@
-import React from "react";
+import "./App.css";
 import CheckoutStepper from "./components/CheckoutStepper";
 
 const CHECKOUT_STEPS = [
   {
     name: "Customer Info",
-    Component: () => <div>Provide your contact Details.</div>,
+    Component: () => <div>Provide your contact details.</div>,
   },
   {
     name: "Shipping Info",
-    Component: () => <div>Provide your contact Details.</div>,
+    Component: () => <div>Enter your shipping address.</div>,
   },
   {
     name: "Payment",
-    Component: () => <div>Provide your contact Details.</div>,
+    Component: () => <div>Complete payment for your order.</div>,
   },
   {
     name: "Delivered",
-    Component: () => <div>Provide your contact Details.</div>,
+    Component: () => <div> Your order has been delivered.</div>,
   },
 ];
 
-const App = () => {
+function App() {
   return (
     <div>
-      <CheckoutStepper stepConfig={CHECKOUT_STEPS} />
+      <h2>Checkout</h2>
+      <CheckoutStepper stepsConfig={CHECKOUT_STEPS} />
     </div>
   );
-};
+}
 
 export default App;
